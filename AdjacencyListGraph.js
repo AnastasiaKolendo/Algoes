@@ -45,6 +45,32 @@ class Graph{
             console.log(curr);
         }
     }
+
+    findRoute(node1, node2){
+        if(node1 == node2) return true;
+        console.log(node1, node2)
+        let seen = {}
+        let q = [];
+        q.push(node1)
+        seen[node1] = true;
+    
+        while(q.length){
+            let curr = q.shift()
+            let edges = this.AdjList.get(curr);
+            
+            for(let vertex of edges){
+                if(!seen[vertex]){
+                    if(vertex === node2){
+                        return true
+                    }
+                    seen[vertex] = true;
+                    q.push(vertex)
+                }
+            }
+            console.log(curr);
+        }
+        return false;
+    }
 }
 
 let graph = new Graph(6);
@@ -65,3 +91,4 @@ graph.addEdge('C', 'F');
 
 graph.printGraph();
 graph.bfs('A')
+console.log(graph.findRoute('A', 'C'))
