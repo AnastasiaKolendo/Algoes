@@ -24,6 +24,27 @@ class Graph{
             }
         }
     }
+
+    bfs(startingNode){
+        let visited = {};
+        let q = [];
+        q.push(startingNode);
+        visited[startingNode] = true;
+
+        while(q.length){
+            let curr = q.shift()
+            let edges = this.AdjList.get(curr);
+            
+            for(let vertex of edges){
+                if(!visited[vertex]){
+                    visited[vertex] = true;
+                    q.push(vertex)
+                }
+                
+            }
+            console.log(curr);
+        }
+    }
 }
 
 let graph = new Graph(6);
@@ -43,3 +64,4 @@ graph.addEdge('E', 'C');
 graph.addEdge('C', 'F');
 
 graph.printGraph();
+graph.bfs('A')
