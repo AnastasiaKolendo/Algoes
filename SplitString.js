@@ -1,5 +1,4 @@
 
-
 function splitString(str){
     let len = str.length;
             let count = 0;
