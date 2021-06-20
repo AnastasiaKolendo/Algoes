@@ -7,3 +7,4 @@ function compareAnagrams(content){
 }
 
 compareAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat'])
+
