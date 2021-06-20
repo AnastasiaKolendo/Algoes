@@ -1,51 +1,42 @@
 function getShortestUniqueSubstring(arr, str) {
-    // your code goes here
-    let shortestSubstring = '';
-    let obj = {};
-    let count = 0;
-    let startIndex = 0;
-
-    for (let i = 0; i < arr.length; i++) {
-        obj[arr[i]] = 0;
+    const counter = new Map();
+    const add = i => {
+      const c = str[i];
+      const count = counter.get(c);
+      if(count === undefined) {
+        counter.set(c, 1);
+      } else {
+        counter.set(c, count + 1);
+      }
     }
-
-    for (let endInd = 0; endInd < str.length; endInd++) {
-
-        let currCharacter = str[endInd];
-
-        if (!obj.hasOwnProperty(currCharacter)) {
-        }else {   
-
-            if (obj[currCharacter] === 0) {
-                count += 1
-            }
-
-            obj[currCharacter]++;
-
-            while (count === arr.length) {
-
-                let resultSubstring = str.substring(startIndex, endInd);
-                
-                if (shortestSubstring.length === 0) {
-                    shortestSubstring = resultSubstring;
-                } else {
-                    if (resultSubstring.length < shortestSubstring.length && resultSubstring.length !== 0) {
-                        shortestSubstring = resultSubstring
-                    }
-                }
-
-                obj[str[startIndex]]--;
-
-
-                if (obj[startIndex] == 0) {
-                    count--;
-                }
-                startIndex++
-            }
-        } 
+    const remove = i => {
+      const c = str[i];
+      const count = counter.get(c);
+      if(count === 1) {
+        counter.delete(c);
+      } else {
+        counter.set(c, count - 1);
+      }
     }
-
-    return shortestSubstring;
-}
+    let i = 0;
+    let j = 0;
+    let resultI = 0;
+    let resultJ = str.length;
+    while (j < str.length || counter.size === arr.length) {
+      if(counter.size === arr.length) {
+        if(j - i < resultJ - resultI) {
+          resultI = i;
+          resultJ = j;
+        }
+        remove(i);
+        i++;
+      } else {
+        add(j);
+        j++;
+      }
+    }
+    return str.substring(resultI, resultJ);
+  }
 
 console.log(getShortestUniqueSubstring(['x', 'y', 'z'], "xyyzyzyx"))
+
