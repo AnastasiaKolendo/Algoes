@@ -66,9 +66,6 @@ heap.insert(6);
 heap.insert(2);
 heap.insert(7);
 
-// console.log(heap.extractMin());
-// console.log(heap.extractMin());
-
 function sortKMessedArray(arr, k){
     let n = arr.length;
 
@@ -98,7 +95,7 @@ console.log(sortKMessedArray([1, 4, 5, 2, 3, 7, 8, 6, 10, 9], 2))
 function insertionSort(arr){
     for(let i = 1; i < arr.length; i++){
         let min = arr[i];
-        console.log(min, 'min')
+        
         let j = i - 1;
 
         while(j >= 0 && arr[j] > min){
@@ -106,7 +103,7 @@ function insertionSort(arr){
             j--
         }
         arr[j + 1] = min
-        console.log(arr, 'arr')
+       
     }
     return arr
 }
