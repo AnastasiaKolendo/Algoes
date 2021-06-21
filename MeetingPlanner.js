@@ -1,5 +1,4 @@
 function meetingPlanner(slotsA, slotsB, dur) {
-    // your code goes here
     let result = [];
     let i = 0;
     let j = 0;
@@ -19,7 +18,6 @@ function meetingPlanner(slotsA, slotsB, dur) {
       }
       
     }
-  
   
     return result;
   
