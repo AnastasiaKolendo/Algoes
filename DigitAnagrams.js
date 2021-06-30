@@ -17,16 +17,3 @@ function digitDiagrams(a){
 
 
 console.log(digitDiagrams([25, 35, 872, 228, 53, 278, 872, 728]))
-// count = 0
-// mydict = defaultdict(list)
-// for i in range(len(b)):
-//     sn = "".join(sorted(str(b[i])))
-//     mydict[sn].append(b[i])
-
-// for k in mydict:
-//     n = len(mydict[k])
-//     if n>=2:
-//         paircombinations = math.factorial(n)//(2*(math.factorial(n-2)))
-//         count += paircombinations
-
-// print(count)

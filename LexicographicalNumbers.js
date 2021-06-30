@@ -13,15 +13,9 @@ function lexicalOrder(s, t) {
 }
 
  function check(s, len, count, t) {
-    for (let i = 0; i < len; i++) {
-      if (Number.isNaN(s[i])) {
-        let temp = s.substring(0, i) + s.substring(i + 1);
-
-        if (temp.compareTo(t) < 0) {
-          count++;
-        }
-      } else {
-
+    for(let i = 0; i < len; i++){
+      if((s.substring(0, i) + s.substring(i + 1).localeCompare(t) > 0)){
+        count++;
       }
     }
   }

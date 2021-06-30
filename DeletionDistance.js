@@ -7,13 +7,13 @@ function deletionDistance(str1, str2) {
     for (let i = 1; i <= str1Len; i++){
         for (let j = 1; j <= str2Len; j++){
             if(str1.charAt(i - 1) === str2.charAt(j - 1)){
-                memo[i][j] = 1 + memo[i-1][j-1];// found a character
+                memo[i][j] = 1 + memo[i-1][j-1];
             } else {
                 memo[i][j] = Math.max(memo[i][j-1], memo[i-1][j]);
             }
         }
     }
-    console.log(memo)
+
     return str1Len + str2Len - memo[str1Len][str2Len] * 2;
   }
 

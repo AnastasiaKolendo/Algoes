@@ -13,17 +13,3 @@ function removeDigit(a){
 }
 
 console.log()
-
-// int ways = 0;
-//     for (int i = 0; i < a.length(); i++) {
-
-//         if (Character.isDigit(a.charAt(i))) {
-
-//             String s = a.substring(0, i) + a.substring(i + 1);
-
-//             if (s.compareTo(b) < 0 || b.compareTo(s) < 0)
-//                 ways++;
-
-//         }
-//     }
-//     return ways;

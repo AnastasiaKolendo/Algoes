@@ -6,7 +6,10 @@ function rotate(matrix, k) {
             if(i === j) continue;
             for (let r = 0; r < k % 4; r++) {
                 const d = matrix[n - 1 - j][i]
+                console.log( matrix[n  - 1 - j][i])
                 matrix[n  - 1 - j][i] = matrix[n - 1 - i][n - 1 - j]
+                
+                console.log(matrix[n - 1 - i][n - 1 - j])
                 matrix[n - 1 - i][n - 1 - j] = matrix[j][n - 1 - i]
                 matrix[j][n - 1 - i] = matrix[i][j]
                 matrix[i][j] = d

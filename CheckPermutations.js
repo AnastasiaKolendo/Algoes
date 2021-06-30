@@ -1,5 +1,3 @@
-// Check Permutation: 
-// Given two strings, write a method to decide if one is a permutation of the other.
 function isPermutation(str1, str2){
     let obj1 = {};
 
