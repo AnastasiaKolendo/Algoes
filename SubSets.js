@@ -1,5 +1,5 @@
 function subsets(nums) {
-    return pingas(nums)
+    return findSubsets(nums)
 }
 
 function findSubsets(nums) {
@@ -34,3 +34,5 @@ function findSubsets(nums) {
 
 
 
+//Time Complexity: O(N * 2^n)
+//Space complexity: O(N * 2^n)
