@@ -93,6 +93,14 @@ function Node(key) {
   
   console.log("Largest smaller number is " + result);
 
+//Time complexity: O(h) where h is height of BST.
+//Space complexity is O(n)
+
+//Space complexity for the tree itself is proportional to the number of nodes in the tree. Hence, O(N)
+//The max amount of stack will essentially be the height of the tree from the root node to the leaf node furthest down. In the average case (and best case) - assuming a tree that's fairly well balanced, then the height would be about log₂ N. 
+//Hence, space complexity would be O(log₂ N) or simply O(lg N) In a worst case scenario, where the tree is just a sorted linked list branching right with incrementing values, then O(N) as worst case.
+
+
 //   function findLargestSmallerKey(rootNode, num):
 //     result = -1
 
