@@ -32,5 +32,5 @@ var findMedianSortedArrays = function(nums1, nums2) {
 
 
  console.log(findMedianSortedArrays([1, 3], [2]))
- console.log(findMedianSortedArrays([1, 2], [3, 4]))
+ console.log(findMedianSortedArrays([1, 2, 5], [3, 4]))
  console.log(findMedianSortedArrays([0, 0], [0, 0]))
