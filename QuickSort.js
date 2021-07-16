@@ -1,15 +1,13 @@
 function quickSort(arr, left, right){
     let pivot = partion(arr, left, right);
 
-    console.log(pivot, arr, 'here')
-
     if(left < pivot - 1){
-        //sort leftHalf
+        //sort left half
         quickSort(arr, left, pivot - 1)
     }
 
     if(pivot < right){
-        //sort rightHalf
+        //sort right half
         quickSort(arr, pivot, right)
     }
 }
