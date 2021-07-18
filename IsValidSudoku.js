@@ -5,8 +5,11 @@ var isValidSudoku = function(board) {
         if(!isValid(board[i])){
             return false;
         }
+    }
+    
+    for(let i = 0; i <  board.length; i++){
         let column = [];
-        for(let j = 0; j <  board.length; j++){
+        for(let j = 0; j < board[0].length; j++){
             column.push(board[j][i]);
         }
         
@@ -14,6 +17,7 @@ var isValidSudoku = function(board) {
             return false;
         }  
     }
+        
     
     for(let i = 0; i < board.length; i += 3){
         for(let j = 0; j < board[0].length; j += 3){
