@@ -3,6 +3,7 @@ function calculateSubsequenceOccurences(sequence, subSequence) {
     const findOccurences = (i, j) => {
         const key = i * subSequence.length + j
         const cached = cache[key]
+        console.log(cached, 'cached')
         if (cached !== undefined) {
             return cached
         }
