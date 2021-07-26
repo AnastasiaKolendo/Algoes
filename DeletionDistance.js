@@ -13,7 +13,7 @@ function deletionDistance(str1, str2) {
             }
         }
     }
-
+    console.log(memo)
     return str1Len + str2Len - memo[str1Len][str2Len] * 2;
   }
 
