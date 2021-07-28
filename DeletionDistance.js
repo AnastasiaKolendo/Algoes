@@ -18,3 +18,4 @@ function deletionDistance(str1, str2) {
   }
 
   console.log(deletionDistance('heat', 'hit'))
+  
