@@ -7,8 +7,9 @@ function decrypt(word) {
     for(let i = 1; i < word.length; i++){
       let currChar = word[i];
       let asciiCode = currChar.charCodeAt(0);
-      
-      while(asciiCode < 97 + first ){
+      asciiCode -= first;
+       
+      while(asciiCode < 97){
         asciiCode += 26;
       }
       result += String.fromCharCode(asciiCode - first);
